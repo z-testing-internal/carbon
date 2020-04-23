@@ -6,24 +6,24 @@
  */
 
 'use strict';
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 const rds = fs.readdirSync;
 const dn = path.dirname;
 
 path.dirname = (...args) => {
-  console.log('path.dirname()', ...args);
+  //console.log('path.dirname()', ...args);
   return dn(...args);
-}
+};
 
 fs.readdirSync = (...args) => {
   try {
-    console.log('fs.readdirSync()', ...args);
+    //console.log('fs.readdirSync()', ...args);
     return rds(...args);
   } catch (e) {
-    console.log('FS ERROR - ' + e.message)
+    console.log('FS ERROR: ', e);
   }
-}
+};
 
 const { builders, Metadata } = require('@carbon/icon-build-helpers');
 
