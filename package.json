@@ -15,7 +15,8 @@
     "nohoist": []
   },
   "scripts": {
-    "build": "lerna run build --stream --prefix --npm-client yarn",
+	"delete": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "build": "yarn delete && yarn install && lerna run build --stream --prefix --npm-client yarn",
     "ci-check": "carbon-cli ci-check",
     "clean": "lerna run clean && lerna clean --yes && rimraf node_modules",
     "doctoc": "doctoc --title '## Table of Contents'",
