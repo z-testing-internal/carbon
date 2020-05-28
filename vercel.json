@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "FORCE_BUILDER_TAG": "canary",
+      "NOW_DEBUG": "1"
+    }
+  }
+}
