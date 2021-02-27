@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "NOW_BUILDER_DEBUG": "1"
+    }
+  }
+}
